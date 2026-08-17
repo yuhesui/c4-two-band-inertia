@@ -140,6 +140,7 @@ class VerifierTests(unittest.TestCase):
         with (LEAN_ROOT / "lakefile.toml").open("rb") as lakefile:
             lake_config = tomllib.load(lakefile)
         self.assertEqual(toolchain.strip(), "leanprover/lean4:v4.33.0")
+        self.assertEqual(lake_config["version"], "1.0.2")
         self.assertEqual(lake_config["defaultTargets"], ["C4TwoBandInertia"])
         self.assertEqual(
             lake_config["lean_lib"], [{"name": "C4TwoBandInertia"}]
