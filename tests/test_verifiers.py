@@ -7,7 +7,6 @@ from pathlib import Path
 import re
 import subprocess
 import sys
-import tomllib
 import unittest
 
 
@@ -118,23 +117,19 @@ class VerifierTests(unittest.TestCase):
         toolchain = (LEAN_ROOT / "lean-toolchain").read_text(
             encoding="utf-8"
         )
-        with (LEAN_ROOT / "lakefile.toml").open("rb") as lakefile:
-            lake_config = tomllib.load(lakefile)
+        lake_config = (LEAN_ROOT / "lakefile.lean").read_text(
+            encoding="utf-8"
+        )
         self.assertEqual(toolchain.strip(), "leanprover/lean4:v4.33.0")
-        self.assertEqual(lake_config["defaultTargets"], ["C4TwoBandInertia"])
-        self.assertEqual(
-            lake_config["lean_lib"], [{"name": "C4TwoBandInertia"}]
+        self.assertIn("package C4TwoBandInertia where", lake_config)
+        self.assertIn('version := v!"1.0.0"', lake_config)
+        self.assertIn(
+            'require "leanprover-community" / "mathlib" '
+            '@ git "v4.33.0"',
+            lake_config,
         )
-        self.assertEqual(
-            lake_config["require"],
-            [
-                {
-                    "name": "mathlib",
-                    "scope": "leanprover-community",
-                    "rev": "v4.33.0",
-                }
-            ],
-        )
+        self.assertIn("@[default_target]", lake_config)
+        self.assertIn("lean_lib C4TwoBandInertia", lake_config)
 
 
 if __name__ == "__main__":
