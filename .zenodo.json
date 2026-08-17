@@ -1,0 +1,29 @@
+{
+  "title": "Verification artifacts for Cubic children and two-band inertia in near-extremal C4-free graphs",
+  "description": "Two independent Python verification implementations and a Lean formalization for the algebraic identities, moment expansions, threshold inequalities, asymptotic coefficients, and diagnostic values used in the associated manuscript.",
+  "creators": [
+    {
+      "name": "Sui, Yuhe",
+      "affiliation": "Nanyang Technological University",
+      "orcid": "0009-0002-7456-0804"
+    },
+    {
+      "name": "Li, Xiaotong",
+      "affiliation": "Dalian University of Technology",
+      "orcid": "0009-0005-2622-8120"
+    }
+  ],
+  "version": "1.0.0",
+  "license": "MIT",
+  "access_right": "open",
+  "upload_type": "software",
+  "language": "eng",
+  "keywords": [
+    "graph theory",
+    "C4-free graphs",
+    "spectral graph theory",
+    "matrix inertia",
+    "Ramsey theory",
+    "exact verification"
+  ]
+}

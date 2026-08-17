@@ -1,0 +1,49 @@
+{
+  "schema": "c4-two-band-inertia-verification-v1",
+  "scope": "Exact algebraic supplement; graph-theoretic arguments remain human-verified.",
+  "limits": {
+    "sympy_max_r": 12,
+    "independent_max_r": 20,
+    "square_defect_min_s": 1296,
+    "rational_child_min_a": 10,
+    "quartic_min_t": 4
+  },
+  "beta_hermite": {
+    "degree_five_coefficients": ["15/8", "-5/4", "3/8"],
+    "degree_seven_coefficients": ["35/16", "-35/16", "21/16", "-5/16"],
+    "degree_five_error_constant": "5/16",
+    "degree_five_band_error_constant": "135/16",
+    "degree_seven_error_constant": "35/128"
+  },
+  "exceptional_coefficients": {
+    "delta8_s2": "0",
+    "delta6_s2": "2/3",
+    "delta8_s_at_L5": "85/12",
+    "delta8_s_at_L17": "25/12",
+    "delta6_s_at_L5": "19/4",
+    "delta6_s_at_L17": "-1/4",
+    "scaled_error_constant": "945/32"
+  },
+  "diagnostics": {
+    "s28": {
+      "s": 28,
+      "n": 816,
+      "signature": -3,
+      "kappa_real_interval": [
+        "-123.676404544731231245181625873",
+        "365.866006169554483040532659841"
+      ],
+      "kappa_mod_5": [1]
+    },
+    "s30": {
+      "s": 30,
+      "n": 934,
+      "signature": -3,
+      "kappa_real_interval": [
+        "415.834779782611862708376415512",
+        "925.002190956539079500910333941"
+      ],
+      "kappa_mod_5": [4]
+    }
+  }
+}
