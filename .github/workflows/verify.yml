@@ -47,5 +47,9 @@ jobs:
           lint: false
           use-mathlib-cache: true
           leanchecker: true
-          nanoda: true
-          nanoda-allow-sorry: false
+          nanoda: false
+      - name: Strict nanoda external type check
+        working-directory: lean
+        env:
+          NANODA_ALLOW_SORRY: "false"
+        run: bash run_nanoda.sh

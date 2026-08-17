@@ -114,6 +114,25 @@ class VerifierTests(unittest.TestCase):
                 f"forbidden Lean placeholder in {source_path}",
             )
 
+    def test_nanoda_covers_every_certificate_theorem(self) -> None:
+        certificates = (
+            LEAN_ROOT / "C4TwoBandInertia" / "Certificates.lean"
+        ).read_text(encoding="utf-8")
+        nanoda_script = (LEAN_ROOT / "run_nanoda.sh").read_text(
+            encoding="utf-8"
+        )
+        declared = set(
+            re.findall(r"^theorem ([A-Za-z0-9_]+)", certificates, re.M)
+        )
+        selected = set(
+            re.findall(
+                r"^  C4TwoBandInertia\.([A-Za-z0-9_]+)",
+                nanoda_script,
+                re.M,
+            )
+        )
+        self.assertEqual(selected, declared)
+
     def test_lean_and_mathlib_versions_are_pinned(self) -> None:
         toolchain = (LEAN_ROOT / "lean-toolchain").read_text(
             encoding="utf-8"
