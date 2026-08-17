@@ -18,7 +18,8 @@ authors:
     affiliation: "Dalian University of Technology"
     orcid: "https://orcid.org/0009-0005-2622-8120"
     website: "https://github.com/ClzHhhhhhh"
-version: "1.0.0"
+version: "1.0.2"
+date-released: 2026-08-17
 repository-code: "https://github.com/yuhesui/c4-two-band-inertia"
 license: MIT
 keywords:

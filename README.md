@@ -2,6 +2,8 @@
 
 Exact verification artifacts accompanying the manuscript **Cubic children and two-band inertia in near-extremal $C_4$-free graphs**.
 
+Current verification release: **v1.0.2**.
+
 ## Authors
 
 - Yuhe Sui — Nanyang Technological University — [ORCID 0009-0002-7456-0804](https://orcid.org/0009-0002-7456-0804) — [@yuhesui](https://github.com/yuhesui)
