@@ -1,0 +1,11 @@
+name = "C4TwoBandInertia"
+version = "1.0.0"
+defaultTargets = ["C4TwoBandInertia"]
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.33.0"
+
+[[lean_lib]]
+name = "C4TwoBandInertia"
