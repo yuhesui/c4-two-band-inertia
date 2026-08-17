@@ -6,8 +6,8 @@ if [[ "${NANODA_ALLOW_SORRY:-}" != "false" ]]; then
   exit 1
 fi
 
-readonly LEAN4EXPORT_REV="9847384d3ea63a0e70567cdd6ae26c419402297c"
-readonly NANODA_REV="e5438ac0a85a036b6dfe093aa457bc3448498014"
+readonly LEAN4EXPORT_REV="15f6055e299ad5b89345e533cc2192f4cc00f659"
+readonly NANODA_REV="418320295890faed83a96fd97907b12a3b6728c2"
 readonly WORK_DIR="$(mktemp -d)"
 readonly EXPORT_DIR="${WORK_DIR}/lean4export"
 readonly NANODA_DIR="${WORK_DIR}/nanoda_lib"
