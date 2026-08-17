@@ -65,10 +65,6 @@ Both Python methods use explicit runtime checks that remain active under `python
 - `VERIFICATION_README.md` — verification coverage and trust boundary
 - `requirements.txt` — pinned runtime dependencies
 
-## Archival release
-
-Follow [RELEASE_CHECKLIST.md](RELEASE_CHECKLIST.md). Reserve the archival DOI before the final tag, add it to the citation metadata and manuscript, regenerate `SHA256SUMS`, and archive the exact tagged commit.
-
 ## License
 
 Code and associated documentation in this repository are released under the MIT License.
